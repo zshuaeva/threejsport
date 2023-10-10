@@ -16,7 +16,7 @@ function ThreeScene() {
 
     // creates the test cube and add it to the scene
     const geometry = new THREE.BoxGeometry(1, 1, 1);
-    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+    const material = new THREE.MeshBasicMaterial({ color: 0xFF00FF });
     const cube = new THREE.Mesh(geometry, material);
     scene.add(cube);
 
@@ -26,8 +26,8 @@ function ThreeScene() {
     // actual animation settings
     const animate = () => {
       requestAnimationFrame(animate);
-
-      cube.rotation.x += 0.01;
+      //rotation speed
+      cube.rotation.x += .025;
       cube.rotation.y += 0.01;
 
       renderer.render(scene, camera);
